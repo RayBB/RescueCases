@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @mission.game %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @mission.location %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @mission.level %>
+</p>
+
+<p>
+  <strong>Rescue link:</strong>
+  <%= @mission.rescue_link %>
+</p>
+
+<p>
+  <strong>Rescued link:</strong>
+  <%= @mission.rescued_link %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @mission.notes %>
+</p>
+
+<p>
+  <strong>Finished:</strong>
+  <%= @mission.finished %>
+</p>
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>

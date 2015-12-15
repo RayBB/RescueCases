@@ -1,0 +1,35 @@
+<h1>Missions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Game</th>
+      <th>Location</th>
+      <th>Level</th>
+      <th>Rescue</th>
+      <th>Rescued</th>
+      <th>Notes</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @missions.reverse_each do |mission| %>
+      <tr class="<%= did(mission.finished)%>" >
+        <td><%= mission.game %></td>
+        <td><%= mission.location %></td>
+        <td><%= mission.level %></td>
+        <td><a href="<%= mission.rescue_link %>"><%= check_link(mission.rescue_link) %></a></td>
+        <td><a href="<%= mission.rescued_link %>"><%= check_link(mission.rescue_link) %></a></td>
+        <td><%= mission.notes %></td>
+        <td><%= link_to 'Show', mission %></td>
+        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
+        <!--<td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Help me!', new_mission_path %>

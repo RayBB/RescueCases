@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  game: MyString
+  location: MyString
+  level: 1
+  rescue_link: MyString
+  rescued_link: MyString
+  notes: MyText
+  finished: false
+
+two:
+  game: MyString
+  location: MyString
+  level: 1
+  rescue_link: MyString
+  rescued_link: MyString
+  notes: MyText
+  finished: false
