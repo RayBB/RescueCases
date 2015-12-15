@@ -1,3 +1,6 @@
+<!-- Makes page refresh every minute
+<meta http-equiv="refresh" content="60">
+-->
 <h1>Missions</h1>
 
 <table>
@@ -24,7 +27,7 @@
         <td><%= mission.notes %></td>
         <td><%= link_to 'Show', mission %></td>
         <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-        <!--<td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
