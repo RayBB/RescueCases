@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :game %><br>
-    <%= f.text_field :game %>
+    <%= f.select :game, [['SMD','SMD'],['GTI','GTI'],['EO','EO'],['RT','RT']] %>
   </div>
   <div class="field">
     <%= f.label :location %><br>
@@ -27,17 +27,21 @@
     <%= f.label :rescue_link %><br>
     <%= f.text_field :rescue_link %>
   </div>
+
+  <% if !@mission.new_record? %>
   <div class="field">
     <%= f.label :rescued_link %><br>
     <%= f.text_field :rescued_link %>
   </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
   </div>
   <% if !@mission.new_record? %>
   <div class="field">
-    <%= f.label :finished %><br>
+    <%= f.label :finished %>
     <%= f.check_box :finished %>
   </div>
   <% end %>

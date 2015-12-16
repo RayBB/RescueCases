@@ -1,9 +1,11 @@
-<!-- Makes page refresh every minute
+<!-- Makes page refresh every minute -->
 <meta http-equiv="refresh" content="60">
--->
-<h1>Missions</h1>
 
-<table>
+
+<h1 class="text-center">Missions</h1>
+
+<div class="container-fluid">
+<table class="table table-bordered table-responsive">
   <thead>
     <tr>
       <th>Game</th>
@@ -12,7 +14,7 @@
       <th>Rescue</th>
       <th>Rescued</th>
       <th>Notes</th>
-      <th colspan="3"></th>
+      <th colspan="3">Options</th>
     </tr>
   </thead>
 
@@ -27,12 +29,17 @@
         <td><%= mission.notes %></td>
         <td><%= link_to 'Show', mission %></td>
         <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-        <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <!--<td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
 
-<%= link_to 'Help me!', new_mission_path %>
+<div class="text-center">
+<form action="<%= new_mission_path %>">
+    <input class="btn btn-primary theButton" type="submit" value="Get Help!">
+</form>
+</div>
+

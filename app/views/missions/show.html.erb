@@ -1,3 +1,4 @@
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -17,12 +18,12 @@
 
 <p>
   <strong>Rescue link:</strong>
-  <%= @mission.rescue_link %>
+  <a href="<%= @mission.rescue_link %>"><%= check_link(@mission.rescue_link) %></a>
 </p>
 
 <p>
   <strong>Rescued link:</strong>
-  <%= @mission.rescued_link %>
+  <a href="<%= @mission.rescued_link %>"><%= check_link(@mission.rescued_link) %></a>
 </p>
 
 <p>

@@ -3,16 +3,27 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-    background-color: yellow;
+	background-color: #3399ff;
 }
 
-table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
-th, td {
-    padding: 5px;
-}
+
 .done {
 	background-color: #00DD00;
+}
+
+.center-me {
+	position: absolute;
+	top: 50%;
+	left: 50%; 
+	transform: translate(-50%, -50%);
+}
+
+.left-align {
+	text-align:left;
+}
+
+
+.theButton {
+	margin: 0 auto;
+	width: 30%;
 }
