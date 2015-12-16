@@ -11,6 +11,7 @@
     </div>
   <% end %>
 
+  <div class="container-fluid">
   <div class="field">
     <%= f.label :game %><br>
     <%= f.select :game, [['SMD','SMD'],['GTI','GTI'],['EO','EO'],['RT','RT']] %>
@@ -48,4 +49,6 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
+
 <% end %>
