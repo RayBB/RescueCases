@@ -26,13 +26,13 @@
   </div>
   <div class="field">
     <%= f.label :rescue_link %><br>
-    <%= f.text_field :rescue_link %>
+    <%= f.url_field :rescue_link %>
   </div>
 
   <% if !@mission.new_record? %>
   <div class="field">
     <%= f.label :rescued_link %><br>
-    <%= f.text_field :rescued_link %>
+    <%= f.url_field :rescued_link %>
   </div>
   <% end %>
 
