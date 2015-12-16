@@ -53,13 +53,14 @@ class MissionsController < ApplicationController
 
   # DELETE /missions/1
   # DELETE /missions/1.json
-  def destroy
-    @mission.destroy
-    respond_to do |format|
-      format.html { redirect_to missions_url, notice: 'Mission was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # There will be no deleting for now!
+  #def destroy
+  #  @mission.destroy
+  #  respond_to do |format|
+  #    format.html { redirect_to missions_url, notice: 'Mission was successfully destroyed.' }
+  #    format.json { head :no_content }
+  #  end
+  #end
 
   private
     # Use callbacks to share common setup or constraints between actions.
