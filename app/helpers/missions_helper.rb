@@ -1,7 +1,7 @@
 module MissionsHelper
 
 	def check_link(link)
-		if !link.nil?
+		if !link.nil? && !link.empty?
 			"Link"
 		else
 			""

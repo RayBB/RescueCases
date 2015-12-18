@@ -1,0 +1,23 @@
+<h1>Help</h1>
+<p>Honestly, I'm not really sure what kind of help people might need. As I get more questions/suggestions I'll probably add them here.</p>
+
+
+      <a href="#" id="dnperm">Request permission</a>
+      <a href="#" id="dntrigger">Trigger</a>
+
+        <script>
+          var dnperm = document.getElementById('dnperm');
+          var dntrigger = document.getElementById('dntrigger');
+
+          dnpterm.addEventListener('click', funciton(e) {
+            e.preventDefault();
+
+            if(!window.Notification) {
+              alert('Sorry, not supported');
+            } else {
+              Notification.requestPermission(function(p) {
+                  console.log(p);
+              });
+            }
+          });
+          </script>

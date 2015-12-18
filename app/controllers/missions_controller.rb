@@ -4,7 +4,8 @@ class MissionsController < ApplicationController
   # GET /missions
   # GET /missions.json
   def index
-    @missions = Mission.all
+    # Old code @missions = Mission.all
+    @missions = Mission.order('created_at DESC').paginate(page: params[:page], per_page: 10)
   end
 
   # GET /missions/1

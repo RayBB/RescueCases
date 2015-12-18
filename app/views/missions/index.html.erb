@@ -1,9 +1,7 @@
 <!-- Makes page refresh every minute -->
 <meta http-equiv="refresh" content="60">
 
-
 <h1 class="text-center">Missions</h1>
-
 <div class="container-fluid">
 <table class="table table-bordered table-responsive">
   <thead>
@@ -19,7 +17,7 @@
   </thead>
 
   <tbody>
-    <% @missions.reverse_each do |mission| %>
+    <% @missions.each do |mission| %>
       <tr class="<%= did(mission.finished)%>" >
         <td><%= mission.game %></td>
         <td><%= mission.location %></td>
@@ -34,6 +32,7 @@
     <% end %>
   </tbody>
 </table>
+<div class="text-center"><%= will_paginate @books %></div>
 </div>
 
 

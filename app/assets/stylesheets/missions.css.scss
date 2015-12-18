@@ -12,10 +12,11 @@ body {
 }
 
 .center-me {
-	position: absolute;
-	top: 50%;
-	left: 50%; 
-	transform: translate(-50%, -50%);
+    margin: auto;
+    width: 60%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
 }
 
 .left-align {
