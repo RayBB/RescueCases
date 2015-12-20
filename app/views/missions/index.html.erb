@@ -1,5 +1,6 @@
 <!-- Makes page refresh every minute -->
-<meta http-equiv="refresh" content="60">
+<meta http-equiv="refresh" content="60"
+<%= auto_discovery_link_tag :rss, missions_url(:format => :rss) %>
 
 <h1 class="text-center">Missions</h1>
 <div class="container-fluid">
@@ -32,7 +33,9 @@
     <% end %>
   </tbody>
 </table>
-<div class="text-center"><%= will_paginate @books %></div>
+<div class="text-center"><%= will_paginate @books %> 
+  <i> <%= link_to 'RSS', missions_url(:format => :rss) %> </i> </div>
+
 </div>
 
 
@@ -40,5 +43,6 @@
 <form action="<%= new_mission_path %>">
     <input class="btn btn-primary theButton" type="submit" value="Get Help!">
 </form>
+<p><i>Page automatically refreshes every 60 seconds</p></i>
 </div>
 
