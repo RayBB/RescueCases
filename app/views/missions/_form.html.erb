@@ -36,6 +36,13 @@
   </div>
   <% end %>
 
+    <% if !@mission.rescued_link.nil? && !@mission.rescued_link.empty? %>
+  <div class="field">
+    <%= f.label :thank_you_link %><br>
+    <%= f.url_field :thank_you_link %>
+  </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
@@ -46,6 +53,8 @@
     <%= f.check_box :finished %>
   </div>
   <% end %>
+
+
   <div class="actions">
     <%= f.submit %>
   </div>
