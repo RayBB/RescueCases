@@ -36,7 +36,7 @@
   </div>
   <% end %>
 
-    <% if !@mission.rescued_link.nil? && !@mission.rescued_link.empty? %>
+  <% if !@mission.rescued_link.nil? && !@mission.rescued_link.empty? %>
   <div class="field">
     <%= f.label :thank_you_link %><br>
     <%= f.url_field :thank_you_link %>
