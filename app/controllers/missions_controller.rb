@@ -75,7 +75,7 @@ class MissionsController < ApplicationController
       @mission = Mission.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    # Never trust parameters from the scary internet, only allow the white list through
     def mission_params
       params.require(:mission).permit(:game, :location, :level, :rescue_link, :rescued_link, :notes, :progress)
     end
