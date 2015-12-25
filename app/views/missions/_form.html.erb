@@ -65,6 +65,12 @@
 document.getElementById('mission_location').required = true;
 document.getElementById('mission_level').required = true;
 document.getElementById('mission_rescue_link').required = true;
+document.getElementById('mission_rescued_link').onclick=function(){finished()};
+
+function finished(){
+  document.getElementById('mission_progress').value = 2;
+}
+
 </script>
 
 <% end %>
