@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151218230853) do
+ActiveRecord::Schema.define(version: 20151225064337) do
 
   create_table "missions", force: true do |t|
     t.string   "game"
@@ -20,10 +20,11 @@ ActiveRecord::Schema.define(version: 20151218230853) do
     t.string   "rescue_link"
     t.string   "rescued_link"
     t.text     "notes"
-    t.boolean  "finished"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "thank_you_link"
+    t.string   "status"
+    t.integer  "progress"
   end
 
 end

@@ -26,19 +26,20 @@
   <a href="<%= @mission.rescued_link %>"><%= check_link(@mission.rescued_link) %></a>
 </p>
 
+<% if !@mission.rescued_link.nil? && !@mission.rescued_link.empty? %>
 <p>
   <strong>Thank you link:</strong>
   <a href="<%= @mission.thank_you_link %>"><%= check_link(@mission.thank_you_link) %></a>
 </p>
-
+<% end %>
 <p>
   <strong>Notes:</strong>
   <%= @mission.notes %>
 </p>
 
 <p>
-  <strong>Finished:</strong>
-  <%= @mission.finished %>
+  <strong>Progress:</strong>
+  <%= @mission.progress %>
 </p>
 
 <%= link_to 'Edit', edit_mission_path(@mission) %> |

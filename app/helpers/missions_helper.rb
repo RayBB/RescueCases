@@ -8,7 +8,18 @@ module MissionsHelper
 		end
 	end
 
-	def did(finished)
-		"done" if finished
+	def getStatus(label)
+
+		if label == 2
+			return "done";
+		end
+
+		if label == 1
+			return "in-progress";
+		end
+
+		if label == 0
+			return "";
+		end
 	end
 end

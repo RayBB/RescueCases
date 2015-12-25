@@ -6,25 +6,17 @@ body {
 	background-color: #3399ff;
 }
 
-
 .done {
-	background-color: #00DD00;
+	background-color: #61FF86;
+}
+
+.in-progress {
+	background-color: #FFD561;
 }
 
 .center-me {
     margin: auto;
-    width: 60%;
+    width: 99%;
     margin-top: 10px;
     margin-bottom: 10px;
-
-}
-
-.left-align {
-	text-align:left;
-}
-
-
-.theButton {
-	margin: 0 auto;
-	width: 30%;
 }

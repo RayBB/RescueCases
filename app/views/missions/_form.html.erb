@@ -47,10 +47,11 @@
     <%= f.label :notes %><br>
     <%= f.text_area :notes %>
   </div>
+
   <% if !@mission.new_record? %>
   <div class="field">
-    <%= f.label :finished %>
-    <%= f.check_box :finished %>
+    <%= f.label :progress %> <br>
+    <%= f.select :progress, [['Posted',0],['In Progress',1],['Finished',2]]  %>
   </div>
   <% end %>
 
@@ -59,5 +60,11 @@
     <%= f.submit %>
   </div>
 </div>
+
+<script>
+document.getElementById('mission_location').required = true;
+document.getElementById('mission_level').required = true;
+document.getElementById('mission_rescue_link').required = true;
+</script>
 
 <% end %>

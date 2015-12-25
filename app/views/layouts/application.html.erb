@@ -27,7 +27,33 @@
 
 
 <body>
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
 
+    <a href="#" class="navbar-brand">Rescue Time</a>
+
+    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navHeaderCollapse">
+      <ul class="nav navbar-nav">
+        <li><a href="/missions/">Rescue Board</a></li>
+        <li><a href="/static_pages/about/">About</a></li>
+        <li><a href="/static_pages/help/">Help</a></li>
+        <li><a href="/static_pages/contact/">Contact</a></li>
+      </ul>
+
+    </div>
+
+
+
+  </div>
+</div>
+
+<!--
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -43,12 +69,16 @@
     </div>
   </div>
 </nav>
+-->
 
-  <div class="center-me well" style="margin-top: 0px;">
-    <div class="left-align container-fluid">
+
+<div class="container">
+  <div class="center-me well">
+    <div class="container-fluid">
       <%= yield %>
     </div>
   </div>
+</div>
 </body>
 
 </html>
