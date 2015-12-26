@@ -22,4 +22,16 @@ module MissionsHelper
 			return "";
 		end
 	end
+
+	def getProgress(num)
+		if num == 0
+			return "Posted"
+		end
+		if num == 1
+			return "In Progress"
+		end
+		if num == 2
+			return "Finished"
+		end
+	end
 end

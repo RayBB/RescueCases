@@ -39,8 +39,15 @@
 
 <p>
   <strong>Progress:</strong>
-  <%= @mission.progress %>
+  <%= getProgress(@mission.progress) %>
 </p>
+<script>
+if (<%= @mission.progress %> == 1) {
+  document.getElementsByClassName("container-fluid")[0].style.backgroundColor = "#FFD561";
+} else if (<%= @mission.progress %> == 2){
+  document.getElementsByClassName("container-fluid")[0].style.backgroundColor = "#61FF86";
+}
+</script>
 
 <%= link_to 'Edit', edit_mission_path(@mission) %> |
 <%= link_to 'Back', missions_path %>
