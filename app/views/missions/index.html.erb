@@ -9,7 +9,7 @@
     <tr>
       <th>Game</th>
       <th>Location</th>
-      <th>Level</th>
+      <th>Floor</th>
       <th>Rescue</th>
       <th>Rescued</th>
       <th>Notes</th>
@@ -22,7 +22,7 @@
       <tr class="<%= getStatus(mission.progress)%>" >
         <td><%= mission.game %></td>
         <td><%= mission.location %></td>
-        <td><%= mission.level %></td>
+        <td><%= mission.floor %></td>
         <td><a href="<%= mission.rescue_link %>"><%= check_link(mission.rescue_link) %></a></td>
         <td><a href="<%= mission.rescued_link %>"><%= check_link(mission.rescued_link) %></a></td>
         <td><%= mission.notes %></td>

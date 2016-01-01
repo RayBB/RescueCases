@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151225064337) do
+ActiveRecord::Schema.define(version: 20160101230546) do
 
   create_table "missions", force: true do |t|
     t.string   "game"
     t.string   "location"
-    t.integer  "level"
+    t.integer  "floor"
     t.string   "rescue_link"
     t.string   "rescued_link"
     t.text     "notes"
