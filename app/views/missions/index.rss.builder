@@ -7,7 +7,7 @@ xml.rss :version => "2.0" do
 
     @missions.each do |mission|
       xml.item do
-        xml.title mission.game + ", " + mission.location + " floor " + mission.level.to_s
+        xml.title mission.game + ", " + mission.location + " floor " + mission.floor.to_s
         xml.description #mission.location + mission.game
         xml.pubDate mission.created_at.to_s(:rfc822)
         xml.link mission_path(mission)
