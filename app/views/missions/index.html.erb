@@ -1,48 +1,62 @@
 <!-- Makes page refresh every minute -->
 <meta http-equiv="refresh" content="60">
+<!-- Allows RSS to be found-->
 <%= auto_discovery_link_tag :rss, missions_url(:format => :rss) %>
 
-<h1 class="text-center">Missions</h1>
-<div class="container-responsive table-responsive">
-<table class="table">
-  <thead>
-    <tr>
-      <th>Game</th>
-      <th>Location</th>
-      <th>Floor</th>
-      <th>Rescue</th>
-      <th>Rescued</th>
-      <th>Notes</th>
-      <th colspan="3">Options</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @missions.each do |mission| %>
-      <tr class="<%= getStatus(mission.progress)%>" >
-        <td><%= mission.game %></td>
-        <td><%= mission.location %></td>
-        <td><%= mission.floor %></td>
-        <td><a href="<%= mission.rescue_link %>"><%= check_link(mission.rescue_link) %></a></td>
-        <td><a href="<%= mission.rescued_link %>"><%= check_link(mission.rescued_link) %></a></td>
-        <td><%= mission.notes %></td>
-        <td><%= link_to 'Show', mission %></td>
-        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-        <!--<td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+<div class="row">
+  <h1 class="text-center">Missions</h1>
+  <div class="container-responsive table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Game</th>
+        <th>Location</th>
+        <th>Floor</th>
+        <th>Rescue</th>
+        <th>Rescued</th>
+        <th>Notes</th>
+        <th colspan="3">Options</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+
+    <tbody>
+      <% @missions.each do |mission| %>
+        <tr class="<%= getStatus(mission.progress)%>" >
+          <td><%= mission.game %></td>
+          <td><%= mission.location %></td>
+          <td><%= mission.floor %></td>
+          <td><a href="<%= mission.rescue_link %>"><%= check_link(mission.rescue_link) %></a></td>
+          <td><a href="<%= mission.rescued_link %>"><%= check_link(mission.rescued_link) %></a></td>
+          <td><%= mission.notes %></td>
+          <td><%= link_to 'Show', mission %></td>
+          <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
+          <!--<td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="text-center">
+      <%= will_paginate @books %> 
+      <i> <%= link_to 'RSS', missions_url(:format => :rss) %> </i>
+      <form action="<%= new_mission_path %>">
+          <input class="btn btn-primary" type="submit" value="Get Help!">
+      </form>
+      <br>
+      <i>Page automatically refreshes every 60 seconds</i>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <div class="text-center">
+      
+      <br>
+      <br>
+      <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/RescueDungeon" data-widget-id="683160419821858820">Tweets by @RescueDungeon</a>
+    </div>
+  </div>
 </div>
 
-<div class="text-center"><%= will_paginate @books %> 
-  <i> <%= link_to 'RSS', missions_url(:format => :rss) %> </i> </div>
-
-<div class="text-center">
-<form action="<%= new_mission_path %>">
-    <input class="btn btn-primary" type="submit" value="Get Help!">
-</form>
-<br>
-<p><i>Page automatically refreshes every 60 seconds</p></i>
-</div>
-
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
