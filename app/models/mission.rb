@@ -11,7 +11,7 @@ class Mission < ActiveRecord::Base
   	end
 
   	def rescued_should_be_rescued
-  		if rescued_link != ""
+  		if rescued_link != "" && rescued_link != nil
   			errors.add(:rescued_link, "Not a valid URL. Please upload to imgur or cloudfront. (This is to prevent spam)") if
     		!rescued_link.index('http')  == 0 # || !rescued_link.include?('imgur.com/' || 'cloudfront.net/')
   		end
