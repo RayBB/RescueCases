@@ -2,10 +2,10 @@
 class Rack::Attack
   # your custom configuration...
   
-	# Block requests from 68.200.90.50
-	Rack::Attack.blacklist('block 68.200.90.50') do |req|
-	  # Requests are blocked if the return value is truthy
-	  '68.200.90.50' == req.ip
+	# Block requests from 64.229.51.6 
+	Rack::Attack.blacklist('block 64.229.51.6 ') do |req|
+	  # Blocks Hitler Guy
+	  '64.229.51.6 ' == req.ip
 	end
 
 end
